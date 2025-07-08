@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    height: 130px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+}
+.nav-above{
+    background-color: #3352A5;
+    height: 35%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-left: 45px;
+    padding-right: 45px;
+    color:#CBCFDD;
+}
+.nav-above-email{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 40px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color:aliceblue;
+    align-items: center;
+    height: 75%;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo span{
+    font-size: 25px;
+    font-weight: bold;
+    color:#3352A5;
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 570px;
+    text-decoration: none;
+}
+nav ul a{
+    text-decoration: none;
+}
+nav ul li{
+    font-size: 19px;
+    font-weight: 500;
+    position: relative;
+    cursor: pointer;
+    padding-bottom: 4px;
+    transition: color 0.2s;
+    list-style: none;
+}
+nav ul li::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 3px;
+    background: linear-gradient(90deg, #3352A5 60%, #5e8fff 100%);
+    border-radius: 2px;
+    transition: width 0.3s cubic-bezier(.4,0,.2,1);
+}
+nav ul li:hover {
+    color: #3352A5;
+    font-weight: 600;
+}
+nav ul li:hover::after {
+    width: 100%;
+}
+.nav-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.nav-buttons button{
+    padding: 10px 28px;
+    background: linear-gradient(90deg, #3352A5 70%, #5e8fff 100%);
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 12px rgba(51,82,165,0.10);
+    transition: background 0.35s cubic-bezier(.4,0,.2,1), color 0.25s, box-shadow 0.35s, transform 0.18s;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.nav-buttons button::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255,255,255,0.18);
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+    transition: width 0.4s cubic-bezier(.4,0,.2,1), height 0.4s cubic-bezier(.4,0,.2,1);
+    z-index: 1;
+}
+.nav-buttons button:hover::after {
+    width: 250px;
+    height: 250px;
+}
+.nav-buttons button:hover {
+    background: linear-gradient(90deg, #5e8fff 0%, #3352A5 100%);
+    color: #fff;
+    box-shadow: 0 6px 24px rgba(51,82,165,0.18);
+    transform: scale(1.06);
+}
+.nav-buttons button:active {
+    transform: scale(0.98);
+    box-shadow: 0 1px 4px rgba(51,82,165,0.10);
+}
+.nav-buttons button span {
+    position: relative;
+    z-index: 2;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7f8fa;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.alert {
+    padding: 12px 20px;
+    margin: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.3s ease-out;
+}
+
+.alert-error {
+    background-color: #fee;
+    color: #c53030;
+    border: 1px solid #feb2b2;
+}
+
+.alert-success {
+    background-color: #f0fff4;
+    color: #22543d;
+    border: 1px solid #9ae6b4;
+}
+
+.alert ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.alert li {
+    margin: 5px 0;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    height: 419px;
+    padding: 20px;
+    margin-top: 130px;
+    padding-top: 40px;
+}
+
+.logo {
+    margin-bottom: 40px;
+    padding-top:40px;
+    margin-left:35px;
+    
+}
+
+.logo img {
+    height: 80px;
+    width: 80px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+    margin-left:35px;
+}
+
+p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 30px;
+    margin-left:35px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-left:35px;
+}
+
+label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    width:310px;
+}
+
+.btn {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #3352A5;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width:330px;
+}
+
+button:hover {
+    background-color:#6576a4;
+}
+
+.register-section {
+    margin-top: 25px;
+    margin-left: 5px;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #e0e0e0;
+}
+
+.register-text {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+    margin-left: 0;
+}
+
+.register-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #007BFF 0%, #0056b3 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+}
+
+.register-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.register-btn:hover::before {
+    left: 100%;
+}
+
+.register-btn:hover {
+    background: linear-gradient(135deg, #0056b3 0%, #003d82 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
+    border-color: #007BFF;
+}
+
+.register-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #aaa;
+}
